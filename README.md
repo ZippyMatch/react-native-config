@@ -1,4 +1,5 @@
-# Config variables for React Native apps
+# react-native-config
+## Config variables for React Native apps
 
 Module to expose config variables to your javascript code in React Native, supporting both iOS and Android.
 
@@ -228,3 +229,7 @@ export default {
   FOO_BAR: 'baz',
 };
 ```
+
+## Changelog
+
+* ZippyMatch/react-native-config -- our version eliminates the deletion of `/tmp/envfile` in `BuildDotenvConfig.rb`. We do this because `BuildDotenvConfig.rb` is called as part of the Podspec for `react-native-config`, but then we still need the envfile as part of our primary build to run `BuildXCodeConfig.rb` for pre-processing Info.plist
